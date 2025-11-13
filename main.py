@@ -7,8 +7,10 @@ from pathlib import Path
 import platform
 import webbrowser
 
+
+
 script_dir = Path(__file__).parent
-SONG_FILE = script_dir / "songs.txt"
+
 
 def parse_song_line(line):
     """Trích xuất index, title, url từ một dòng."""
@@ -105,6 +107,21 @@ def main():
         print("Đã mở bài hát bằng trình duyệt hoặc ứng dụng mặc định.")
     else:
         print("Không thể mở bài hát tự động, vui lòng mở thủ công.")
+
+print("---------Menu--------")
+print('1. Chill Music')
+print('2. Motivational Music')
+
+n = input("Hôm nay tâm trạng của bạn thế nào: ")
+if(n == "Sad" or n == "relax"):
+    
+    SONG_FILE = script_dir / "ChillMusic.txt"
+    
+    
+if(n == "exitement" or n == 'intensity'):
+     SONG_FILE = script_dir / "MotivationalMusic.txt"
+else:
+    exit
 
 if __name__ == "__main__":
     main()
