@@ -113,12 +113,12 @@ print('1. Chill Music')
 print('2. Motivational Music')
 
 n = input("Hôm nay tâm trạng của bạn thế nào: ")
-if(n == "Sad" or n == "relax"):
+if(n == "Sad" or n == "relax" or n == '1'):
     
     SONG_FILE = script_dir / "ChillMusic.txt"
     
     
-if(n == "exitement" or n == 'intensity'):
+if(n == "exitement" or n == 'intensity' or n =='2'):
      SONG_FILE = script_dir / "MotivationalMusic.txt"
 else:
     exit
